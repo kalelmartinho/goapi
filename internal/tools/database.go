@@ -13,9 +13,13 @@ type TodoDetails struct {
 	Username    string
 }
 
+type TodosDetails struct {
+	Todos []TodoDetails
+}
+
 type DatabaseInterface interface {
 	GetLoginDetails(username string) *LoginDetails
-	GetTodos(username string) *[]TodoDetails
+	GetTodos(username string) *TodosDetails
 	SetupDatabase() error
 }
 
