@@ -2,6 +2,7 @@ package api
 
 import (
 	"encoding/json"
+	"github.com/kalelmartinho/goapi/internal/tools"
 	"net/http"
 )
 
@@ -15,7 +16,8 @@ type Todo struct {
 }
 
 type TodoResponse struct {
-	Todos []Todo
+	tools.TodosDetails
+	Code int
 }
 
 type Error struct {
